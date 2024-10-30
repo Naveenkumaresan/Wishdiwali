@@ -14,7 +14,7 @@
 body {
    
     background: linear-gradient(270deg, rgba(130, 115, 0, 0.5), rgba(138, 43, 226, 0.5), rgba(199, 21, 133, 0.5), rgba(255, 69, 0, 0.5)),
-        url("../image/Luxurious\ Rich\ Violet\ Rotating\ Line\ Mandala\ Simple\ Looping\ Animation\ Blank\ Vertical\ Video\ Background.jpg");
+        url("../Diwali/image/Luxurious\ Rich\ Violet\ Rotating\ Line\ Mandala\ Simple\ Looping\ Animation\ Blank\ Vertical\ Video\ Background.jpg");
     background-size: cover;
     background-position: center;
     color: #fff;
@@ -125,10 +125,15 @@ body {
     user-select: none;   
 }
 
+@media (min-width: 769px) {
+    body{
+        display: none;
+    }
+}
 
 @media (max-width: 768px) {
     body {
-        background: url("../image/Luxurious\ Rich\ Violet\ Rotating\ Line\ Mandala\ Simple\ Looping\ Animation\ Blank\ Vertical\ Video\ Background.jpg");
+        background: url("../Diwali/image/Luxurious\ Rich\ Violet\ Rotating\ Line\ Mandala\ Simple\ Looping\ Animation\ Blank\ Vertical\ Video\ Background.jpg");
         background-position: center;
         min-height: 100vh;
         overflow: hidden;
