@@ -53,14 +53,33 @@
 
     <script src="script.js"></script>
     <script src="firecrackers.js"></script>
-    <script type="text/javascript">
+    <!-- <script type="text/javascript">
         $('.fireworks').fireworks({
             sound: true, // sound effect
             opacity: 0.3,
             width: '200%',
             height: '200%'
         });
-    </script>
-  
+    </script> -->
+  <script type="text/javascript">
+    $(document).ready(function() {
+        const soundEnabled = window.innerWidth < 769;
+        const fireworksInstance = $('.fireworks').fireworks({
+            sound: soundEnabled,
+            opacity: 0.3,
+            width: '200%',
+            height: '200%'
+        });
+
+        window.addEventListener('resize', function() {
+            const isMobile = window.innerWidth < 769;
+            if (isMobile && !fireworksInstance.options.sound) {
+                fireworksInstance.options.sound = true;
+            } else if (!isMobile && fireworksInstance.options.sound) {
+                fireworksInstance.options.sound = false;
+            }
+        });
+    });
+</script>
 </body>
 </html>
