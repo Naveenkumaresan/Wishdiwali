@@ -9,7 +9,7 @@ function createRipple(x, y) {
     });
     setTimeout(() => {
         ripple.remove(); 
-    }, 600);
+    }, 100);
 }
 
 function showOverlay() {
@@ -25,7 +25,7 @@ function showOverlay() {
         }, {
             scale: 1, 
             opacity: 1, 
-            duration: 1, 
+            duration: 0.5, 
             ease: "back.out(1.7)", 
             onComplete: function () {
                 console.log("Overlay shown!");
